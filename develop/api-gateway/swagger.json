@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "UG KIOSK API Gateway",
+    "version": "1.0.0"
+  },
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    }
+  ],
+  "paths": {
+    "/translations-kiosk-api/**": {
+      "get": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-get",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-post",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-put",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-delete",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-patch",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-options",
+        "x-ms-backend": {
+          "url": "${translations_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/scrapers-kiosk-api/**": {
+      "get": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-get",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-post",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-put",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-delete",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-patch",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-options",
+        "x-ms-backend": {
+          "url": "${scrapers_kiosk_api_url}"
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

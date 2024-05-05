@@ -13,7 +13,3 @@ output "docker_registry" {
 output "docker_username" {
     value = "kusmier"
 }
-
-output "key_vault_name" {
-    value = "UG-KIOSK-SECRETS"
-}

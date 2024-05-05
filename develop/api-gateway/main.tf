@@ -2,10 +2,6 @@ module "shared_envs_dev" {
   source = "../../shared-envs/development"
 }
 
-locals {
-  api_config_file_path = "${path.module}/api-swagger.json"
-}
-
 resource "azurerm_api_management" "ug-kiosk-api" {
   name                = var.gateway_name
   location            = module.shared_envs_dev.location

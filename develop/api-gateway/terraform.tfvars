@@ -1,1 +1,1 @@
-gateway_name = "UG-KIOSK-API-DEV"
+gateway_name = "ug-kiosk-api-dev"

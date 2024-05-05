@@ -1,2 +1,2 @@
-docker_image_tag = "5e17b819ffd73379a9789a46ba2c74d41fa76eea"
-app_service_name = "SCRAPERS-KIOSK-DEV"
+docker_image_tag = "4c826ef97a9fce82a37feb46301491096a8e99dc"
+app_service_name = "scrapers-kiosk-dev"

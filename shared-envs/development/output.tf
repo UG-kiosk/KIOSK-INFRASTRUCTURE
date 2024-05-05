@@ -1,5 +1,5 @@
 output "resource_group_name" {
-    value = "UG-KIOSK"
+    value = "ug-kiosk-dev"
 }
 
 output "location" {

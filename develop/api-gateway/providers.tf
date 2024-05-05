@@ -5,6 +5,13 @@ terraform {
         version = "3.68"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "ug-kiosk-dev"
+    storage_account_name = "tfstateprxuh"
+    container_name       = "tfstate"
+    key                  = "kiosk-gateway/terraform.tfstate"
+  }
 }
 
 provider "azurerm" {

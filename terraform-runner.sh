@@ -30,7 +30,7 @@ terraform_apply() {
     echo "                    At directory                    "
     echo "                      $1                            "
     echo "===================================================="
-    terraform apply output.tfplan
+    terraform apply output.tfplan -auto-approve
     echo "Terraform apply completed in $1"
 }
 
@@ -62,23 +62,25 @@ process_directory() {
 }
 
 main() {
-    local directory="$1"
+    local base_directory="$1"
     local action="$2"
     
     if [ -z "$action" ]; then
         echo "No action specified. Please specify 'validate', 'init', 'plan', or 'apply'."
         exit 1
     fi
-    
-    if [ -d "$directory" ]; then
-        for dir in "$directory"/*/; do
-            process_directory "$dir" "$action"
+
+    if [ -d "$base_directory" ]; then
+        for dir in $(find "$base_directory" -type d); do
+            if ! find "$dir" -mindepth 1 -maxdepth 2 -type d | read -r; then
+                process_directory "$dir" "$action"
+            fi
         done
         echo "========================== SUCCESS =========================="
         echo "   All terraform $action operations completed successfully   "
         echo "============================================================="
     else
-        echo "Directory $directory does not exist."
+        echo "Directory $base_directory does not exist."
     fi
 }
 

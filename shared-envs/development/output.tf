@@ -1,5 +1,5 @@
 output "resource_group_name" {
-    value = "UG-KIOSK"
+    value = "ug-kiosk-dev"
 }
 
 output "location" {
@@ -12,8 +12,4 @@ output "docker_registry" {
 
 output "docker_username" {
     value = "kusmier"
-}
-
-output "key_vault_name" {
-    value = "UG-KIOSK-SECRETS"
 }

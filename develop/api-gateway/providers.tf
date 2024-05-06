@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
         source = "hashicorp/azurerm"
-        version = "=3.89.0"
+        version = "3.68"
     }
   }
 
@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "ug-kiosk-dev"
     storage_account_name = "tfstateprxuh"
     container_name       = "tfstate"
-    key                  = "translations-kiosk/terraform.tfstate"
+    key                  = "kiosk-gateway/terraform.tfstate"
   }
 }
 

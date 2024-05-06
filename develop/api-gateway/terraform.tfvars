@@ -1,0 +1,1 @@
+gateway_name = "ug-kiosk-api-dev"

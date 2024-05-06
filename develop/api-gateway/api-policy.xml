@@ -1,0 +1,28 @@
+<policies>
+<inbound>
+    <trace source="my-trace">
+        <message>@($"Request URL Path: {context.Request.Url.Path}")</message>
+    </trace>
+    <choose>
+    <when condition="@(context.Request.Url.Path.StartsWith("kiosk-api"))">
+        <set-backend-service base-url="https://kiosk-api-dev.azurewebsites.net" />
+    </when>
+    <when condition="@(context.Request.Url.Path.StartsWith("scrapers-kiosk-api"))">
+        <set-backend-service base-url="https://scrapers-kiosk-dev.azurewebsites.net" />
+    </when>
+    <when condition="@(context.Request.Url.Path.StartsWith("translations-kiosk-api"))">
+        <set-backend-service base-url="https://translations-kiosk-dev.azurewebsites.net" />
+    </when>
+    </choose>
+    <base />
+</inbound>
+<backend>
+    <base />
+</backend>
+<outbound>
+    <base />
+</outbound>
+<on-error>
+    <base />
+</on-error>
+</policies>

@@ -12,13 +12,14 @@ resource "azurerm_api_management" "ug-kiosk-api" {
 }
 
 resource "azurerm_api_management_api" "ug-kiosk-api-gw" {
-  name                = "${var.gateway_name}-GATEWAY"
-  resource_group_name = module.shared_envs_dev.resource_group_name
-  api_management_name = azurerm_api_management.ug-kiosk-api.name
-  display_name        = "UG Kiosk API" 
-  revision            = "1"
-  path                = ""
-  protocols           = ["https"]
+  name                  = "${var.gateway_name}-GATEWAY"
+  resource_group_name   = module.shared_envs_dev.resource_group_name
+  api_management_name   = azurerm_api_management.ug-kiosk-api.name
+  display_name          = "UG Kiosk API" 
+  revision              = "1"
+  path                  = ""
+  protocols             = ["https"]
+  subscription_required = false
 
   import {
     content_format = "swagger-json"

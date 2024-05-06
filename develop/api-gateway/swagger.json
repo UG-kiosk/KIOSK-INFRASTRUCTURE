@@ -131,6 +131,62 @@
           }
         }
       }
+    },
+    "/kiosk-api/*": {
+      "get": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   }
 }

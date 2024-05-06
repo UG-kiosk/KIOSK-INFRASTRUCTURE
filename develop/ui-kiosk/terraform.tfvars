@@ -1,2 +1,2 @@
-docker_image_tag = "4e8cac44b1f15dd63552f6f0146f1747ddcbc28c"
+docker_image_tag = "80f76f7607d5aa2bcdf45abf1ca733b19ca4576a"
 app_service_name = "ui-kiosk-dev"

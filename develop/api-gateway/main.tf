@@ -2,7 +2,7 @@ module "shared_envs_dev" {
   source = "../../shared-envs/development"
 }
 
-resource "azurerm_api_management" "ug-kiosk-api" {
+resource "azurerm_api_management" "ug_kiosk_api" {
   name                = var.gateway_name
   location            = module.shared_envs_dev.location
   resource_group_name = module.shared_envs_dev.resource_group_name
@@ -11,10 +11,10 @@ resource "azurerm_api_management" "ug-kiosk-api" {
   sku_name            = "Consumption_0"
 }
 
-resource "azurerm_api_management_api" "ug-kiosk-api-gw" {
+resource "azurerm_api_management_api" "ug_kiosk_api_gw" {
   name                  = "${var.gateway_name}-GATEWAY"
   resource_group_name   = module.shared_envs_dev.resource_group_name
-  api_management_name   = azurerm_api_management.ug-kiosk-api.name
+  api_management_name   = azurerm_api_management.ug_kiosk_api.name
   display_name          = "UG Kiosk API" 
   revision              = "1"
   path                  = ""
@@ -27,9 +27,9 @@ resource "azurerm_api_management_api" "ug-kiosk-api-gw" {
   }
 }
 
-resource "azurerm_api_management_api_policy" "ug-kiosk-api-policy" {
-  api_name            = azurerm_api_management_api.ug-kiosk-api-gw.name
-  api_management_name = azurerm_api_management.ug-kiosk-api.name
+resource "azurerm_api_management_api_policy" "ug_kiosk_api_policy" {
+  api_name            = azurerm_api_management_api.ug_kiosk_api_gw.name
+  api_management_name = azurerm_api_management.ug_kiosk_api.name
   resource_group_name = module.shared_envs_dev.resource_group_name
   
   xml_content = file("api-policy.xml")

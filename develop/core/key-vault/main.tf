@@ -14,7 +14,7 @@ locals {
 
 data "azurerm_client_config" "current" {}
 
-resource "azurerm_key_vault" "ug-kiosk-key-vault" {
+resource "azurerm_key_vault" "ug_kiosk_key_vault" {
   name                        = local.key_vault_full_name
   location                    = module.shared_envs_dev.location
   resource_group_name         = module.shared_envs_dev.resource_group_name
@@ -26,8 +26,8 @@ resource "azurerm_key_vault" "ug-kiosk-key-vault" {
 }
 
 
-resource "azurerm_key_vault_access_policy" "ug-kiosk-key-vault-access-policy" {
-  key_vault_id = azurerm_key_vault.ug-kiosk-key-vault.id
+resource "azurerm_key_vault_access_policy" "ug_kiosk_key_vault_access_policy" {
+  key_vault_id = azurerm_key_vault.ug_kiosk_key_vault.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
   object_id    = data.azurerm_client_config.current.object_id
 

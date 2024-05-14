@@ -2,16 +2,6 @@ module "shared_envs_dev" {
   source = "../../shared-envs/development"
 }
 
-data "terraform_remote_state" "ug_kiosk_api_gw_state" {
-  backend = "azurerm"
-  config = {
-    resource_group_name  = "ug-kiosk-dev"
-    storage_account_name = "tfstateprxuh"
-    container_name       = "tfstate"
-    key                  = "kiosk-gateway/terraform.tfstate"
-  }
-}
-
 locals {
   docker_image = "${module.shared_envs_dev.docker_username}/kiosk-scrapers-dev:${var.docker_image_tag}"
 }
@@ -21,7 +11,7 @@ resource "azurerm_service_plan" "scrapers-kiosk" {
   resource_group_name = module.shared_envs_dev.resource_group_name
   location            = module.shared_envs_dev.location
   os_type             = "Linux"
-  sku_name            = "F1"
+  sku_name            = "B1"
 }
 
 resource "azurerm_linux_web_app" "scrapers-kiosk" {
@@ -38,9 +28,26 @@ resource "azurerm_linux_web_app" "scrapers-kiosk" {
       docker_image_name   = local.docker_image
       docker_registry_url = module.shared_envs_dev.docker_registry
     }
+
+    ip_restriction {
+      name  = "allow-microservices"
+      action = "Allow"
+      virtual_network_subnet_id = data.terraform_remote_state.kiosk_network_state.outputs.kiosk_microservices_subnet_id
+    }
+
+    ip_restriction {
+      name  = "allow-apim"
+      action = "Allow"
+      virtual_network_subnet_id = data.terraform_remote_state.kiosk_network_state.outputs.kiosk_api_management_subnet_id
+    }
   }
 
   app_settings = {
     WEBSITES_PORT = "3000"
   }
+}
+
+resource "azurerm_app_service_virtual_network_swift_connection" "subnet_connection" {
+  app_service_id = azurerm_linux_web_app.scrapers-kiosk.id
+  subnet_id      = data.terraform_remote_state.kiosk_network_state.outputs.kiosk_microservices_subnet_id
 }

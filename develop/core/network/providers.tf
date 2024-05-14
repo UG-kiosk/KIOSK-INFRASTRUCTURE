@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "ug-kiosk-dev"
     storage_account_name = "tfstateprxuh"
     container_name       = "tfstate"
-    key                  = "translations-kiosk/terraform.tfstate"
+    key                  = "kiosk-network/terraform.tfstate"
   }
 }
 

@@ -1,0 +1,7 @@
+vnet_name                         = "kiosk-vnet"
+microservices_subnet_name         = "kiosk-microservices-subnet"
+microservices_delegation_name     = "kiosk-microservices-delegation"
+api_management_subnet_name        = "kiosk-api-management-subnet"
+api_management_delegation_name    = "kiosk-api-management-delegation"
+api_management_nsg_name           = "kiosk-api-management-nsg"
+microservices_nsg_name            = "kiosk-microservices-nsg"

@@ -30,7 +30,7 @@ terraform_apply() {
     echo "                    At directory                    "
     echo "                      $1                            "
     echo "===================================================="
-    terraform apply output.tfplan -auto-approve
+    terraform apply -auto-approve output.tfplan 
     echo "Terraform apply completed in $1"
 }
 

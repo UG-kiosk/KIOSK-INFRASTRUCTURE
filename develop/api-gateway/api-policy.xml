@@ -1,8 +1,5 @@
 <policies>
 <inbound>
-    <trace source="my-trace">
-        <message>@($"Request URL Path: {context.Request.Url.Path}")</message>
-    </trace>
     <choose>
     <when condition="@(context.Request.Url.Path.StartsWith("kiosk-api"))">
         <set-backend-service base-url="https://kiosk-api-dev.azurewebsites.net" />
@@ -15,6 +12,20 @@
     </when>
     </choose>
     <base />
+    <cors>
+      <allowed-origins>
+        <origin>*</origin>
+      </allowed-origins>
+      <allowed-methods preflight-result-max-age="300">
+        <method>*</method>
+      </allowed-methods>
+      <allowed-headers>
+        <header>*</header>
+      </allowed-headers>
+      <expose-headers>
+        <header>*</header>
+      </expose-headers>
+    </cors>
 </inbound>
 <backend>
     <base />

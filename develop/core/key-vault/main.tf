@@ -12,8 +12,6 @@ locals {
   key_vault_full_name = "${var.key_vault_name}-${random_string.resource_code.result}"
 }
 
-data "azurerm_client_config" "current" {}
-
 resource "azurerm_key_vault" "ug_kiosk_key_vault" {
   name                        = local.key_vault_full_name
   location                    = module.shared_envs_dev.location

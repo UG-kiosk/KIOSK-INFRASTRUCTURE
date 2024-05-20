@@ -1,1 +1,2 @@
-gateway_name = "ug-kiosk-api-dev"
+apim_name          = "ug-kiosk-apim-dev"
+apim_identity_name = "kiosk-apim-identity"

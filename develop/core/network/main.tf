@@ -83,7 +83,7 @@ resource "azurerm_subnet" "kiosk_private_endpoints_subnet" {
   virtual_network_name = azurerm_virtual_network.kiosk_vnet.name
   address_prefixes     = ["10.0.3.0/24"]
 
-  service_endpoints = ["Microsoft.Web"]
+  service_endpoints = ["Microsoft.Web", "Microsoft.KeyVault"]
 }
 
 resource "azurerm_network_security_group" "private_endpoints_nsg" {

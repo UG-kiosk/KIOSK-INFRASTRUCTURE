@@ -76,6 +76,7 @@
         }
       }
     },
+
     "/scrapers-kiosk-api/*": {
       "get": {
         "summary": "scrapers-kiosk-api",
@@ -132,6 +133,7 @@
         }
       }
     },
+
     "/kiosk-api/*": {
       "get": {
         "summary": "kiosk-api",
@@ -181,6 +183,63 @@
       "options": {
         "summary": "kiosk-api",
         "operationId": "kiosk-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+
+    "/kiosk-auth-api/*": {
+      "get": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-options",
         "responses": {
           "200": {
             "description": "OK"

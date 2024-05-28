@@ -1,20 +1,29 @@
 <policies>
 <inbound>
-    <choose>
-    <when condition="@(context.Request.Url.Path.StartsWith("kiosk-api"))">
-        <set-backend-service base-url="https://kiosk-api-dev.azurewebsites.net" />
-    </when>
-    <when condition="@(context.Request.Url.Path.StartsWith("scrapers-kiosk-api"))">
-        <set-backend-service base-url="https://scrapers-kiosk-dev.azurewebsites.net" />
-    </when>
-    <when condition="@(context.Request.Url.Path.StartsWith("translations-kiosk-api"))">
-        <set-backend-service base-url="https://translations-kiosk-dev.azurewebsites.net" />
-    </when>
-    </choose>
     <base />
+
+    <choose>
+      <when condition="@(context.Request.Url.Path.StartsWith("kiosk-api"))">
+        <set-backend-service base-url="https://kiosk-api-dev.azurewebsites.net" />
+      </when>
+      <when condition="@(context.Request.Url.Path.StartsWith("scrapers-kiosk-api"))">
+        <set-backend-service base-url="https://scrapers-kiosk-dev.azurewebsites.net" />
+      </when>
+      <when condition="@(context.Request.Url.Path.StartsWith("translations-kiosk-api"))">
+        <set-backend-service base-url="https://translations-kiosk-dev.azurewebsites.net" />
+      </when>
+      <when condition="@(context.Request.Url.Path.StartsWith("kiosk-auth-api"))">
+        <set-backend-service base-url="https://kiosk-auth-api-dev.azurewebsites.net" />
+      </when>
+    </choose>
+
+    <rate-limit calls="50" renewal-period="60" />
+
     <cors>
       <allowed-origins>
-        <origin>*</origin>
+        <origin>https://ui-kiosk-dev.azurewebsites.net</origin>
+        <origin>http://localhost</origin>
+        <origin>https://localhost</origin>
       </allowed-origins>
       <allowed-methods preflight-result-max-age="300">
         <method>*</method>

@@ -1,3 +1,5 @@
+# pipeline won't run succesfully due to lack of azure student account permissions
+
 name: DEVELOP-CI-CD
 
 on:

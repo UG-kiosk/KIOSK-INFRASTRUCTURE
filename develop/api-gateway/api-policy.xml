@@ -21,9 +21,8 @@
 
     <cors>
       <allowed-origins>
-        <origin>https://ui-kiosk-dev.azurewebsites.net</origin>
-        <origin>http://localhost</origin>
-        <origin>https://localhost</origin>
+        <!-- <origin>https://ui-kiosk-dev.azurewebsites.net</origin> -->
+        <origin>*</origin>
       </allowed-origins>
       <allowed-methods preflight-result-max-age="300">
         <method>*</method>

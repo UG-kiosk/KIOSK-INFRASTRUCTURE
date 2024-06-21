@@ -1,0 +1,251 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "UG KIOSK API Gateway",
+    "version": "1.0.0"
+  },
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    }
+  ],
+  "paths": {
+    "/translations-kiosk-api/*": {
+      "get": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "translations-kiosk-api",
+        "operationId": "translations-kiosk-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+
+    "/scrapers-kiosk-api/*": {
+      "get": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "scrapers-kiosk-api",
+        "operationId": "scrapers-kiosk-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+
+    "/kiosk-api/*": {
+      "get": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "kiosk-api",
+        "operationId": "kiosk-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+
+    "/kiosk-auth-api/*": {
+      "get": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-get",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-put",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-delete",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-patch",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "options": {
+        "summary": "kiosk-auth-api",
+        "operationId": "kiosk-auth-api-options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

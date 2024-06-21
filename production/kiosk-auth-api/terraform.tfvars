@@ -1,0 +1,6 @@
+docker_image_tag              = "5aa26a9d77a733d105dbcab02e135c88397666a8"
+app_service_name              = "kiosk-auth-api-prod"
+kiosk_auth_api_db_secret_key  = "kiosk-auth-api-db-secret"
+kiosk_auth_api_jwt_secret_key = "kiosk-auth-api-jwt-secret"
+access_token_lifetime         = "15m"
+refresh_token_lifetime        = "1d"

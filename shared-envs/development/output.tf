@@ -13,3 +13,7 @@ output "docker_registry" {
 output "docker_username" {
     value = "kusmier"
 }
+
+output "api_gateway_url" {
+    value = "https://ug-kiosk-apim-dev.azure-api.net"
+}
